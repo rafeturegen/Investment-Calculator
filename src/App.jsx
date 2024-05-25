@@ -12,6 +12,8 @@ function App() {
     duration:12,
   })
 
+  const isValid = dataObject.duration > 0;
+
   function handleInputChange (inputName, newInput) {
       setDataObject((prevDataObject) => {
           return {
@@ -24,7 +26,7 @@ function App() {
     <>
       <Header/>
       <InvestTable onChange={handleInputChange} dataObject={dataObject}/>
-      <Results data={dataObject}/>
+      {isValid ? <Results data={dataObject}/> : <p id="duration-error">Duration must be greater than 0. </p>}
     </>
   )
 }

@@ -12,7 +12,7 @@ export default function InvestTable({onChange, dataObject}) {
             <div className="input-group second-group">
                 <label>Initial Invest</label>
                 <input type="number" value={dataObject.expectedReturn} onChange={(event) => onChange("expectedReturn", event.target.value)} required></input>
-                <label>Annual Invest</label>
+                <label>Duration</label>
                 <input type="number" value={dataObject.duration} onChange={(event) => onChange("duration", event.target.value)}required></input>
             </div>
         </section>
